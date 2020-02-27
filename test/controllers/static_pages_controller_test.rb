@@ -2,29 +2,44 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
+  def setup
+    @base_title = "Music for you"
+  end
 
   test "should get home" do
     get root_path
     assert_response :success
-    assert_select "title", "Music for you"
+    assert_select "title", "#{@base_title}"
+  end
+
+  test "should assign number" do
+    get root_path
+    assert_response :success
+    assert_not_nil assigns (:num)
+  end
+
+  test "get correct value" do
+    get root_path
+    assert_response :success
+    assert_includes [0,1,2,3,4,5,6], (assigns (:num))
   end
 
   test "should get help" do
     get help_path
     assert_response :success
-    assert_select "title", "Help | Music for you"
+    assert_select "title", "Help | #{@base_title}"
   end
 
   test "should get about" do
     get about_path
     assert_response :success
-    assert_select "title", "About | Music for you"
+    assert_select "title", "About | #{@base_title}"
   end
 
   test "should get contact" do
     get contact_path
     assert_response :success
-    assert_select "title", "Contact | Music for you"
+    assert_select "title", "Contact | #{@base_title}"
   end
 
 end
