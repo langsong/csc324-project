@@ -1,5 +1,7 @@
 # README
 
+This site is my individual project for Software Design and Development class at Grinnell College. During the development process, I developed and used various webpage development skills. I learned how to program using Ruby on Rails, and I used several developing techniques including creating static pages, adding dynamic features, and creating forms. I also learned how to create and manage database in order to create the user database for the website. Furthermore, I practiced software design habits of writing test suits for static page models and keeping consistent header and footer throughout the site. 
+
 # Ruby on Rails Tutorial sample application
 
 This is the sample application for

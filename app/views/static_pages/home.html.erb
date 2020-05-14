@@ -1,10 +1,13 @@
 <div class="center jumbotron">
   <h1>Welcome to the Music Recommendation Page</h1>
   
-  <h2>This is the home page for recommending you music! </h2>
-
+  <p>This is the home page for Music for You. Click the "Generate recommended album", and this site will recommend an album for you! The album cover and album information will be shown below on this page.  </p>
+  <p>Feel free to create an account by clicking the "Sign up!" button below. You could get more music recommendations by clicking the "RateMusic" link below, which will lead you to the "rate your music" home page.  </p> 
   <%= link_to "Generate recommended album", '#', class: "btn btn-lg btn-primary" %>
   <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
+<figure>
   <%= link_to image_tag("image#{@num}.jpg", alt: "Album logo", class: "img-responsive center-block")%>
+  <figcaption><%= @description_line %></figcaption>
+</figure>
